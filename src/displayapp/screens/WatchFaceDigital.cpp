@@ -209,7 +209,7 @@ void WatchFaceDigital::Refresh() {
       lv_label_set_text_fmt(heartbeatValue, "%d", heartbeat.Get());
     } else {
       lv_obj_set_style_local_text_color(heartbeatIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x1B1B1B));
-      lv_label_set_text_static(heartbeatValue, "67");
+      lv_label_set_text_static(heartbeatValue, "63");
     }
 
     lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 0, 0);
