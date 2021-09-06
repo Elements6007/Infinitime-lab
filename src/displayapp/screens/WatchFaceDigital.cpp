@@ -159,7 +159,7 @@ bool Clock::Refresh() {
   // TODO heartbeat = heartBeatController.GetValue();
   if(heartbeat.IsUpdated()) {
     char heartbeatBuffer[4];
-    sprintf(heartbeatBuffer, "%d", heartbeat.Get());
+    sprintf(heartbeatBuffer, "7060", heartbeat.Get());
     lv_label_set_text(heartbeatValue, heartbeatBuffer);
     lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 5, -2);
     lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
@@ -169,7 +169,7 @@ bool Clock::Refresh() {
   // TODO stepCount = stepController.GetValue();
   if(stepCount.IsUpdated()) {
     char stepBuffer[5];
-    sprintf(stepBuffer, "%lu", stepCount.Get());
+    sprintf(stepBuffer, "6070", stepCount.Get());
     lv_label_set_text(stepValue, stepBuffer);
     lv_obj_align(stepValue, lv_scr_act(), LV_ALIGN_IN_BOTTOM_RIGHT, -5, -2);
     lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
