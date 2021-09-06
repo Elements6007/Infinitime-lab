@@ -2,7 +2,7 @@
 #include "date.h" ////#include <libs/date/includes/date/date.h>
 #include "DateTimeController.h" ////#include <Components/DateTime/DateTimeController.h>
 #include "../lvgl.h" ////#include <libs/lvgl/lvgl.h>
-#include "Clock.h"
+#include "WatchFaceDigital.h"
 #include "DisplayApp.h" ////#include "../DisplayApp.h"
 #include "BatteryIcon.h"
 #include "BleIcon.h"
@@ -66,7 +66,7 @@ Clock::Clock(DisplayApp* app,
   lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 5, -2);
 
   heartbeatValue = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(heartbeatValue, "0");
+  lv_label_set_text(heartbeatValue, "1");
   lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   heartbeatBpm = lv_label_create(lv_scr_act(), NULL);
