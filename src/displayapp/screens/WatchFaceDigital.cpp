@@ -31,7 +31,7 @@ Clock::Clock(DisplayApp* app,
   displayedChar[4] = 0;
 
           
-  bg_clock_img = lv_img_create(lv_scr_act(), nullptr);
+  lv_obj_t * bg_clock_img = lv_img_create(lv_scr_act(), nullptr);
           
   lv_img_set_src(bg_clock_img, WF_BACKGROUND_C1);
           
