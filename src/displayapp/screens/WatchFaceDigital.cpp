@@ -5008,7 +5008,7 @@ Clock::Clock(DisplayApp* app,
   bitmap.header.always_zero = 0;
   bitmap.header.w = 240;
   bitmap.header.h = 240;
-  bitmap.data_size = 240 * 240 * LV_COLOR_SIZE / 8;
+  bitmap.data_size = 79325;
   bitmap.header.cf = LV_IMG_CF_TRUE_COLOR;
   bitmap.data = bitmap_map;
   lv_obj_t *img_src = lv_img_create(lv_scr_act(), NULL);  
