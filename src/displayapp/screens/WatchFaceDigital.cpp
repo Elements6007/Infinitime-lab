@@ -279,6 +279,18 @@ Clock::Clock(DisplayApp* app,
   displayedChar[4] = 0;
 
           
+          
+          
+  bitmap.header.always_zero = 0;
+  bitmap.header.w = 240;
+  bitmap.header.h = 240;
+  bitmap.data_size = 240 * 240 * LV_COLOR_SIZE / 8;
+  bitmap.header.cf = LV_IMG_CF_TRUE_COLOR;
+  bitmap.data = bitmap_map;
+  lv_obj_t *img_src = lv_img_create(lv_scr_act(), NULL);  
+  lv_img_set_src(img_src, &bitmap);  
+  lv_obj_set_pos(img_src, 0, 0);     
+          
 
           
           
@@ -412,7 +424,7 @@ bool Clock::Refresh() {
   // TODO heartbeat = heartBeatController.GetValue();
   if(heartbeat.IsUpdated()) {
     char heartbeatBuffer[4];
-    sprintf(heartbeatBuffer, "61", heartbeat.Get());
+    sprintf(heartbeatBuffer, "68", heartbeat.Get());
     lv_label_set_text(heartbeatValue, heartbeatBuffer);
     lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 5, -2);
     lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
