@@ -7,6 +7,7 @@
 #include "BatteryIcon.h"
 #include "BleIcon.h"
 #include "Symbols.h"
+#include "bg_clock_04.c"
 
 LV_IMG_DECLARE(bg_clock_04);
 
