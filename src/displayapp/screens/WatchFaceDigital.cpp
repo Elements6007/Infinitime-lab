@@ -36,7 +36,7 @@ Clock::Clock(DisplayApp* app,
   displayedChar[3] = 0;
   displayedChar[4] = 0;
             
-  lv_obj_t* bg_clock_04_img = lv_img_create(lv_src_act(), NULL);
+  lv_obj_t* bg_clock_04_img = lv_img_create(lv_scr_act(), NULL);
   lv_img_set_src(bg_clock_04_img, &bg_clock_04);
   lv_obj_align(bg_clock_04_img, NULL, LV_ALIGN_CENTER, 0, 0);
           
