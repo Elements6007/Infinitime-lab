@@ -56,26 +56,19 @@ jobs:
       run:  |
         # Based on https://emscripten.org/docs/getting_started/downloads.html
         cd /tmp
-
         # Get the emsdk repo
         git clone https://github.com/emscripten-core/emsdk.git
-
         # Enter that directory
         cd emsdk
-
         # Download and install the latest SDK tools.
         ./emsdk install latest
-
         # Make the "latest" SDK "active" for the current user. (writes .emscripten file)
         ./emsdk activate latest
-
         # Activate PATH and other environment variables in the current terminal
         source ./emsdk_env.sh
-
         # Show version
         emcc --version
         emcc --version        
-
     - name: Check cache for wabt
       id:   cache-wabt
       uses: actions/cache@v2
@@ -96,26 +89,22 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-
     - name: Checkout LVGL for WebAssembly
       run:  |
         cd /tmp
-        git clone https://github.com/Elements6007/lvgl-wasm
+        git clone https://github.com/Elements6007v2/lvgl-wasm
         
     - name: Copy WatchFaceDigital.cpp to LVGL for WebAssembly
       run:  |
         cp src/displayapp/screens/WatchFaceDigital.cpp /tmp/lvgl-wasm/clock
-
     - name: Build LVGL for WebAssembly
       run:  |
         # Add emscripten and wabt to the PATH
         source /tmp/emsdk/emsdk_env.sh
         export PATH=$PATH:/tmp/wabt/build
-
         # Build LVGL app: wasm/lvgl.html, lvgl.js, lvgl.wasm
         cd /tmp/lvgl-wasm
         wasm/lvgl.sh
-
     - name: Show files
       run:  set ; pwd ; ls -l /tmp/lvgl-wasm
 
@@ -135,7 +124,6 @@ jobs:
           $wasm/*.wasm \
           $wasm/*.txt \
           docs
-
     - name: Commit GitHub Pages
       uses: EndBug/add-and-commit@v4.4.0
       with:
