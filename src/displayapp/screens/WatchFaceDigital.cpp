@@ -8,21 +8,17 @@
 #include "BleIcon.h"
 #include "Symbols.h"
 #include "bg_clock_04.c"
-
-LV_IMG_DECLARE(bg_clock_04);
-
 using namespace Pinetime::Applications::Screens;
 extern lv_font_t jetbrains_mono_extrabold_compressed;
 extern lv_font_t jetbrains_mono_bold_20;
 extern lv_style_t* LabelBigStyle;
 
+LV_IMG_DECLARE(bg_clock_04);
+
 static void event_handler(lv_obj_t * obj, lv_event_t event) {
   Clock* screen = static_cast<Clock *>(backgroundLabel_user_data); ////static_cast<Clock *>(obj->user_data);
   screen->OnObjectEvent(obj, event);
 }
-
-
-//
 
 Clock::Clock(DisplayApp* app,
         Controllers::DateTime& dateTimeController,
@@ -36,13 +32,11 @@ Clock::Clock(DisplayApp* app,
   displayedChar[2] = 0;
   displayedChar[3] = 0;
   displayedChar[4] = 0;
-            
-
+          
   lv_obj_t* bg_clock_04_img = lv_img_create(lv_scr_act(), NULL);
   lv_img_set_src(bg_clock_04_img, &bg_clock_04);
-  lv_obj_align(bg_clock_04_img, NULL, LV_ALIGN_CENTER, 0, 0);        
-          
-          
+  lv_obj_align(bg_clock_04_img, NULL, LV_ALIGN_CENTER, 0, 0);   
+
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(batteryIcon, Symbols::batteryFull);
   lv_obj_align(batteryIcon, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, -5, 2);
@@ -60,8 +54,7 @@ Clock::Clock(DisplayApp* app,
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 60);
 
-
-label_time = lv_label_create(lv_scr_act(), NULL);
+  label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
   lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 0);
 
@@ -88,7 +81,7 @@ label_time = lv_label_create(lv_scr_act(), NULL);
   lv_obj_align(heartbeatBpm, heartbeatValue, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
 
   stepValue = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_text(stepValue, "7080");
+  lv_label_set_text(stepValue, "70800");
   lv_obj_align(stepValue, lv_scr_act(), LV_ALIGN_IN_BOTTOM_RIGHT, -5, -2);
 
   stepIcon = lv_label_create(lv_scr_act(), NULL);
@@ -173,7 +166,7 @@ bool Clock::Refresh() {
   // TODO heartbeat = heartBeatController.GetValue();
   if(heartbeat.IsUpdated()) {
     char heartbeatBuffer[4];
-    sprintf(heartbeatBuffer, "60", heartbeat.Get());
+    sprintf(heartbeatBuffer, "67", heartbeat.Get());
     lv_label_set_text(heartbeatValue, heartbeatBuffer);
     lv_obj_align(heartbeatIcon, lv_scr_act(), LV_ALIGN_IN_BOTTOM_LEFT, 5, -2);
     lv_obj_align(heartbeatValue, heartbeatIcon, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
@@ -183,7 +176,7 @@ bool Clock::Refresh() {
   // TODO stepCount = stepController.GetValue();
   if(stepCount.IsUpdated()) {
     char stepBuffer[5];
-    sprintf(stepBuffer, "3000", stepCount.Get());
+    sprintf(stepBuffer, "670", stepCount.Get());
     lv_label_set_text(stepValue, stepBuffer);
     lv_obj_align(stepValue, lv_scr_act(), LV_ALIGN_IN_BOTTOM_RIGHT, -5, -2);
     lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
