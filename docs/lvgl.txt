@@ -1739,7 +1739,7 @@ Code[937]:
  - func[666] size=323 <Pinetime::Applications::Screens::BatteryIcon::GetBatteryIcon(float)>
  - func[667] size=114 <Pinetime::Applications::Screens::BatteryIcon::GetPlugIcon(bool)>
  - func[668] size=114 <Pinetime::Applications::Screens::BleIcon::GetIcon(bool)>
- - func[669] size=3004 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
+ - func[669] size=3471 <Pinetime::Applications::Screens::Clock::Clock(DisplayApp*, Pinetime::Controllers::DateTime&, Pinetime::Controllers::Battery&, Pinetime::Controllers::Ble&)>
  - func[670] size=78 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::DirtyValue(unsigned char)>
  - func[671] size=99 <Pinetime::Applications::Screens::DirtyValue<bool>::DirtyValue(bool)>
  - func[672] size=79 <std::__2::chrono::time_point<std::__2::chrono::system_clock, std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> > >::time_point()>
@@ -1749,7 +1749,7 @@ Code[937]:
  - func[676] size=137 <event_handler(_lv_obj_t*, unsigned char)>
  - func[677] size=115 <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[678] size=204 <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
- - func[679] size=5424 <Pinetime::Applications::Screens::Clock::Refresh()>
+ - func[679] size=5988 <Pinetime::Applications::Screens::Clock::Refresh()>
  - func[680] size=51 <Pinetime::Controllers::Battery::PercentRemaining() const>
  - func[681] size=190 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::operator=(unsigned char const&)>
  - func[682] size=66 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::IsUpdated() const>
@@ -2404,73 +2404,73 @@ Data[2]:
   - 0001c10: 4e55 4c4c 0049 6d61 6765 2064 7261 773a  NULL.Image draw:
   - 0001c20: 2073 7263 2069 7320 4e55 4c4c 0041 5547   src is NULL.AUG
   - 0001c30: 0049 4e46 0044 4543 0046 4542 0036 3700  .INF.DEC.FEB.67.
-  - 0001c40: 3200 3637 3000 3730 3830 3000 6c76 5f69  2.670.70800.lv_i
-  - 0001c50: 6d67 5f63 6163 6865 5f6f 7065 6e3a 2074  mg_cache_open: t
-  - 0001c60: 6865 2063 6163 6865 2073 697a 6520 6973  he cache size is
-  - 0001c70: 2030 0079 203e 3d20 3000 7820 3e3d 2030   0.y >= 0.x >= 0
-  - 0001c80: 0049 6d61 6765 2062 7569 6c74 2d69 6e20  .Image built-in 
-  - 0001c90: 6465 636f 6465 7220 6361 6e20 7265 6164  decoder can read
-  - 0001ca0: 2074 6865 2070 616c 6574 7465 2062 6563   the palette bec
-  - 0001cb0: 6175 7365 204c 565f 5553 455f 4649 4c45  ause LV_USE_FILE
-  - 0001cc0: 5359 5354 454d 203d 2030 0049 6d61 6765  SYSTEM = 0.Image
-  - 0001cd0: 2062 7569 6c74 2d69 6e20 6465 636f 6465   built-in decode
-  - 0001ce0: 7220 6361 6e6e 6f74 2072 6561 6420 6669  r cannot read fi
-  - 0001cf0: 6c65 2062 6563 6175 7365 204c 565f 5553  le because LV_US
-  - 0001d00: 455f 4649 4c45 5359 5354 454d 203d 2030  E_FILESYSTEM = 0
-  - 0001d10: 0049 6d61 6765 2062 7569 6c74 2d69 6e20  .Image built-in 
-  - 0001d20: 696e 6465 7865 6420 6c69 6e65 2072 6561  indexed line rea
-  - 0001d30: 6465 7220 6361 6e27 7420 7265 6164 2066  der can't read f
-  - 0001d40: 696c 6520 6265 6361 7573 6520 4c56 5f55  ile because LV_U
-  - 0001d50: 5345 5f46 494c 4553 5953 5445 4d20 3d20  SE_FILESYSTEM = 
-  - 0001d60: 3000 496d 6167 6520 6275 696c 742d 696e  0.Image built-in
-  - 0001d70: 2061 6c70 6861 206c 696e 6520 7265 6164   alpha line read
-  - 0001d80: 6572 2063 616e 2774 2072 6561 6420 6669  er can't read fi
-  - 0001d90: 6c65 2062 6563 6175 7365 204c 565f 5553  le because LV_US
-  - 0001da0: 455f 4649 4c45 5359 5354 454d 203d 2030  E_FILESYSTEM = 0
-  - 0001db0: 0054 6865 2073 7472 696e 6773 2068 6173  .The strings has
-  - 0001dc0: 206e 6f20 5554 462d 3820 656e 636f 6469   no UTF-8 encodi
-  - 0001dd0: 6e67 2e20 536f 6d65 2063 6861 7261 6374  ng. Some charact
-  - 0001de0: 6572 7320 776f 6e27 7420 6265 2064 6973  ers won't be dis
-  - 0001df0: 706c 6179 6564 2e00 4361 6e27 7420 6861  played..Can't ha
-  - 0001e00: 6e64 6c65 2032 2073 6372 6565 6e20 7369  ndle 2 screen si
-  - 0001e10: 7a65 6420 6275 6666 6572 7320 7769 7468  zed buffers with
-  - 0001e20: 2073 6574 5f70 785f 6362 2e20 4469 7370   set_px_cb. Disp
-  - 0001e30: 6c61 7920 6973 206e 6f74 2072 6566 7265  lay is not refre
-  - 0001e40: 7368 6564 2e00 4361 6e27 7420 6861 6e64  shed..Can't hand
-  - 0001e50: 6c65 2032 2073 6372 6565 6e20 7369 7a65  le 2 screen size
-  - 0001e60: 6420 6275 6666 6572 7320 7769 7468 2073  d buffers with s
-  - 0001e70: 6574 5f70 785f 6362 2e20 4469 7370 6c61  et_px_cb. Displa
-  - 0001e80: 7920 7769 6c6c 206e 6f74 2062 6520 7265  y will not be re
-  - 0001e90: 6672 6573 6865 642e 004e 6f20 6672 6565  freshed..No free
-  - 0001ea0: 2062 7566 6665 722e 2049 6e63 7265 6173   buffer. Increas
-  - 0001eb0: 6520 4c56 5f44 5241 575f 4255 465f 4d41  e LV_DRAW_BUF_MA
-  - 0001ec0: 585f 4e55 4d2e 0049 6e20 433a 2049 6e69  X_NUM..In C: Ini
-  - 0001ed0: 7420 6469 7370 6c61 792e 2e2e 0049 6e20  t display....In 
-  - 0001ee0: 433a 2054 6573 7469 6e67 2064 6973 706c  C: Testing displ
-  - 0001ef0: 6179 2e2e 2e00 496e 2043 3a20 5265 6e64  ay....In C: Rend
-  - 0001f00: 6572 696e 6720 6469 7370 6c61 792e 2e2e  ering display...
-  - 0001f10: 0049 6e20 433a 2052 656e 6465 7269 6e67  .In C: Rendering
-  - 0001f20: 2077 6964 6765 7473 2e2e 2e00 496e 2043   widgets....In C
-  - 0001f30: 2b2b 3a20 4372 6561 7469 6e67 2063 6c6f  ++: Creating clo
-  - 0001f40: 636b 2e2e 2e00 496e 2043 2b2b 3a20 5570  ck....In C++: Up
-  - 0001f50: 6461 7469 6e67 2063 6c6f 636b 2e2e 2e00  dating clock....
-  - 0001f60: 496e 2043 2b2b 3a20 5265 6672 6573 6869  In C++: Refreshi
-  - 0001f70: 6e67 2063 6c6f 636b 2e2e 2e00 286e 756c  ng clock....(nul
-  - 0001f80: 6c29 0043 616e 2774 2073 6574 2056 4442  l).Can't set VDB
-  - 0001f90: 2068 6569 6768 7420 7573 696e 6720 7468   height using th
-  - 0001fa0: 6520 726f 756e 6420 6675 6e63 7469 6f6e  e round function
-  - 0001fb0: 2e20 2857 726f 6e67 2072 6f75 6e64 5f63  . (Wrong round_c
-  - 0001fc0: 6220 6f72 2074 6f20 736d 616c 6c20 5644  b or to small VD
-  - 0001fd0: 4229 0049 6e76 616c 6964 2073 7479 6c65  B).Invalid style
-  - 0001fe0: 2028 6c6f 6361 6c20 7661 7269 6162 6c65   (local variable
-  - 0001ff0: 206f 7220 6e6f 7420 696e 6974 6961 6c69   or not initiali
-  - 0002000: 7a65 643f 2900 496e 2043 3a20 6d61 696e  zed?).In C: main
-  - 0002010: 2829 0023 0049 6e20 433a 2046 6c75 7368  ().#.In C: Flush
-  - 0002020: 2064 6973 706c 6179 3a20 6c65 6674 3d25   display: left=%
-  - 0002030: 642c 2074 6f70 3d25 642c 2072 6967 6874  d, top=%d, right
-  - 0002040: 3d25 642c 2062 6f74 746f 6d3d 2564 2e2e  =%d, bottom=%d..
-  - 0002050: 2e0a 0025 733a 2025 7320 0928 2573 2023  ...%s: %s .(%s #
-  - 0002060: 2564 2025 7328 2929 0a00 0000 1600 0000  %d %s())........
+  - 0001c40: 3200 3637 3033 3000 3730 3830 3000 6c76  2.67030.70800.lv
+  - 0001c50: 5f69 6d67 5f63 6163 6865 5f6f 7065 6e3a  _img_cache_open:
+  - 0001c60: 2074 6865 2063 6163 6865 2073 697a 6520   the cache size 
+  - 0001c70: 6973 2030 0079 203e 3d20 3000 7820 3e3d  is 0.y >= 0.x >=
+  - 0001c80: 2030 0049 6d61 6765 2062 7569 6c74 2d69   0.Image built-i
+  - 0001c90: 6e20 6465 636f 6465 7220 6361 6e20 7265  n decoder can re
+  - 0001ca0: 6164 2074 6865 2070 616c 6574 7465 2062  ad the palette b
+  - 0001cb0: 6563 6175 7365 204c 565f 5553 455f 4649  ecause LV_USE_FI
+  - 0001cc0: 4c45 5359 5354 454d 203d 2030 0049 6d61  LESYSTEM = 0.Ima
+  - 0001cd0: 6765 2062 7569 6c74 2d69 6e20 6465 636f  ge built-in deco
+  - 0001ce0: 6465 7220 6361 6e6e 6f74 2072 6561 6420  der cannot read 
+  - 0001cf0: 6669 6c65 2062 6563 6175 7365 204c 565f  file because LV_
+  - 0001d00: 5553 455f 4649 4c45 5359 5354 454d 203d  USE_FILESYSTEM =
+  - 0001d10: 2030 0049 6d61 6765 2062 7569 6c74 2d69   0.Image built-i
+  - 0001d20: 6e20 696e 6465 7865 6420 6c69 6e65 2072  n indexed line r
+  - 0001d30: 6561 6465 7220 6361 6e27 7420 7265 6164  eader can't read
+  - 0001d40: 2066 696c 6520 6265 6361 7573 6520 4c56   file because LV
+  - 0001d50: 5f55 5345 5f46 494c 4553 5953 5445 4d20  _USE_FILESYSTEM 
+  - 0001d60: 3d20 3000 496d 6167 6520 6275 696c 742d  = 0.Image built-
+  - 0001d70: 696e 2061 6c70 6861 206c 696e 6520 7265  in alpha line re
+  - 0001d80: 6164 6572 2063 616e 2774 2072 6561 6420  ader can't read 
+  - 0001d90: 6669 6c65 2062 6563 6175 7365 204c 565f  file because LV_
+  - 0001da0: 5553 455f 4649 4c45 5359 5354 454d 203d  USE_FILESYSTEM =
+  - 0001db0: 2030 0054 6865 2073 7472 696e 6773 2068   0.The strings h
+  - 0001dc0: 6173 206e 6f20 5554 462d 3820 656e 636f  as no UTF-8 enco
+  - 0001dd0: 6469 6e67 2e20 536f 6d65 2063 6861 7261  ding. Some chara
+  - 0001de0: 6374 6572 7320 776f 6e27 7420 6265 2064  cters won't be d
+  - 0001df0: 6973 706c 6179 6564 2e00 4361 6e27 7420  isplayed..Can't 
+  - 0001e00: 6861 6e64 6c65 2032 2073 6372 6565 6e20  handle 2 screen 
+  - 0001e10: 7369 7a65 6420 6275 6666 6572 7320 7769  sized buffers wi
+  - 0001e20: 7468 2073 6574 5f70 785f 6362 2e20 4469  th set_px_cb. Di
+  - 0001e30: 7370 6c61 7920 6973 206e 6f74 2072 6566  splay is not ref
+  - 0001e40: 7265 7368 6564 2e00 4361 6e27 7420 6861  reshed..Can't ha
+  - 0001e50: 6e64 6c65 2032 2073 6372 6565 6e20 7369  ndle 2 screen si
+  - 0001e60: 7a65 6420 6275 6666 6572 7320 7769 7468  zed buffers with
+  - 0001e70: 2073 6574 5f70 785f 6362 2e20 4469 7370   set_px_cb. Disp
+  - 0001e80: 6c61 7920 7769 6c6c 206e 6f74 2062 6520  lay will not be 
+  - 0001e90: 7265 6672 6573 6865 642e 004e 6f20 6672  refreshed..No fr
+  - 0001ea0: 6565 2062 7566 6665 722e 2049 6e63 7265  ee buffer. Incre
+  - 0001eb0: 6173 6520 4c56 5f44 5241 575f 4255 465f  ase LV_DRAW_BUF_
+  - 0001ec0: 4d41 585f 4e55 4d2e 0049 6e20 433a 2049  MAX_NUM..In C: I
+  - 0001ed0: 6e69 7420 6469 7370 6c61 792e 2e2e 0049  nit display....I
+  - 0001ee0: 6e20 433a 2054 6573 7469 6e67 2064 6973  n C: Testing dis
+  - 0001ef0: 706c 6179 2e2e 2e00 496e 2043 3a20 5265  play....In C: Re
+  - 0001f00: 6e64 6572 696e 6720 6469 7370 6c61 792e  ndering display.
+  - 0001f10: 2e2e 0049 6e20 433a 2052 656e 6465 7269  ...In C: Renderi
+  - 0001f20: 6e67 2077 6964 6765 7473 2e2e 2e00 496e  ng widgets....In
+  - 0001f30: 2043 2b2b 3a20 4372 6561 7469 6e67 2063   C++: Creating c
+  - 0001f40: 6c6f 636b 2e2e 2e00 496e 2043 2b2b 3a20  lock....In C++: 
+  - 0001f50: 5570 6461 7469 6e67 2063 6c6f 636b 2e2e  Updating clock..
+  - 0001f60: 2e00 496e 2043 2b2b 3a20 5265 6672 6573  ..In C++: Refres
+  - 0001f70: 6869 6e67 2063 6c6f 636b 2e2e 2e00 286e  hing clock....(n
+  - 0001f80: 756c 6c29 0043 616e 2774 2073 6574 2056  ull).Can't set V
+  - 0001f90: 4442 2068 6569 6768 7420 7573 696e 6720  DB height using 
+  - 0001fa0: 7468 6520 726f 756e 6420 6675 6e63 7469  the round functi
+  - 0001fb0: 6f6e 2e20 2857 726f 6e67 2072 6f75 6e64  on. (Wrong round
+  - 0001fc0: 5f63 6220 6f72 2074 6f20 736d 616c 6c20  _cb or to small 
+  - 0001fd0: 5644 4229 0049 6e76 616c 6964 2073 7479  VDB).Invalid sty
+  - 0001fe0: 6c65 2028 6c6f 6361 6c20 7661 7269 6162  le (local variab
+  - 0001ff0: 6c65 206f 7220 6e6f 7420 696e 6974 6961  le or not initia
+  - 0002000: 6c69 7a65 643f 2900 496e 2043 3a20 6d61  lized?).In C: ma
+  - 0002010: 696e 2829 0023 0049 6e20 433a 2046 6c75  in().#.In C: Flu
+  - 0002020: 7368 2064 6973 706c 6179 3a20 6c65 6674  sh display: left
+  - 0002030: 3d25 642c 2074 6f70 3d25 642c 2072 6967  =%d, top=%d, rig
+  - 0002040: 6874 3d25 642c 2062 6f74 746f 6d3d 2564  ht=%d, bottom=%d
+  - 0002050: 2e2e 2e0a 0025 733a 2025 7320 0928 2573  .....%s: %s .(%s
+  - 0002060: 2023 2564 2025 7328 2929 0a00 1600 0000   #%d %s())......
   - 0002070: 0000 0000 0000 0000 0000 0000 0000 0000  ................
   - 0002080: 0000 3c02 7804 b306 ee08 280b 610d 990f  ..<.x.....(.a...
   - 0002090: d011 0614 3a16 6c18 9d1a cb1c f71e 2121  ....:.l.......!!
@@ -6608,9 +6608,9 @@ Data[2]:
   - 00122c0: 1b00 0000 1c00 0000 0000 0000 0000 0000  ................
   - 00122d0: 3614 0000 930c 0000 d80c 0000 570a 0000  6...........W...
   - 00122e0: 940b 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00122f0: 6920 0000 9c1b 0000 7a1b 0000 821b 0000  i ......z.......
+  - 00122f0: 6b20 0000 9c1b 0000 7a1b 0000 821b 0000  k ......z.......
   - 0012300: 711b 0000 a31b 0000 8c1b 0000 951b 0000  q...............
-  - 0012310: 6920 0000 ec1b 0000 391c 0000 dc1b 0000  i ......9.......
+  - 0012310: 6b20 0000 ec1b 0000 391c 0000 dc1b 0000  k ......9.......
   - 0012320: d81b 0000 6d1b 0000 e41b 0000 f41b 0000  ....m...........
   - 0012330: 2d1c 0000 e01b 0000 d41b 0000 d01b 0000  -...............
   - 0012340: 351c 0000 2a00 0000 2b00 0000 1500 0300  5...*...+.......
