@@ -33,8 +33,7 @@ Clock::Clock(DisplayApp* app,
   displayedChar[3] = 0;
   displayedChar[4] = 0;
           
-  static lv_obj_t* label_shadow_tm;
-  static lv_obj_t* label_shadow_dt;
+
           
   lv_obj_t* bg_clock_04_img = lv_img_create(lv_scr_act(), NULL);
   lv_img_set_src(bg_clock_04_img, &bg_clock_04);
@@ -164,7 +163,7 @@ bool Clock::Refresh() {
       displayedChar[3] = minutesChar[1];
 
       lv_label_set_text(label_time, timeStr);
-      lv_label_set_text(label_shadow_tm, timeStr);
+      lv_label_set_text(label_shadow_tm, shadow_tmStr);
     }
 
     if ((year != currentYear) || (month != currentMonth) || (dayOfWeek != currentDayOfWeek) || (day != currentDay)) {
@@ -174,7 +173,7 @@ bool Clock::Refresh() {
       char Shadow_dtStr[23];
       sprintf(Shadow_dtStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
       
-      lv_label_set_text(label_shadow_dt);
+      lv_label_set_text(label_shadow_dt, Shadow_dtStr);
       lv_label_set_text(label_date, dateStr);
       
 
