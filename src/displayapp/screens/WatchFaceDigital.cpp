@@ -13,7 +13,7 @@ extern lv_font_t jetbrains_mono_extrabold_compressed;
 extern lv_font_t jetbrains_mono_bold_20;
 extern lv_style_t* LabelBigStyle;
 
-LV_IMG_DECLARE(bg_clock_04);
+LV_IMG_DECLARE(bg_clock_01);
 
 static void event_handler(lv_obj_t * obj, lv_event_t event) {
   Clock* screen = static_cast<Clock *>(backgroundLabel_user_data); ////static_cast<Clock *>(obj->user_data);
@@ -36,8 +36,8 @@ Clock::Clock(DisplayApp* app,
 
           
   lv_obj_t* bg_clock_04_img = lv_img_create(lv_scr_act(), NULL);
-  lv_img_set_src(bg_clock_04_img, &bg_clock_04);
-  lv_obj_align(bg_clock_04_img, NULL, LV_ALIGN_CENTER, 0, 0);   
+  lv_img_set_src(bg_clock_01_img, &bg_clock_01);
+  lv_obj_align(bg_clock_01_img, NULL, LV_ALIGN_CENTER, 0, 0);   
  
   
   batteryIcon = lv_label_create(lv_scr_act(), NULL);
