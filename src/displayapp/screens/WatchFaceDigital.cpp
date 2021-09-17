@@ -57,16 +57,13 @@ Clock::Clock(DisplayApp* app,
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 20, 60);
  
-  label_shadow_dt = lv_label_create(lv_scr_act(), NULL);
-  lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 21, 65);
+
           
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
   lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 70, -50);
           
-  label_shadow_tm = lv_label_create(lv_scr_act(), NULL);
-  lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_shadow_tm, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 71, -55);
+
                 
   
 
@@ -153,8 +150,7 @@ bool Clock::Refresh() {
     char timeStr[6];
     sprintf(timeStr, "%c%c\n%c%c", hoursChar[0],hoursChar[1],minutesChar[0], minutesChar[1]);
     
-    char shadow_tmStr[24];
-    sprintf(shadow_tmStr, "%c%c\n%c%c", hoursChar[0],hoursChar[1],minutesChar[0], minutesChar[1]);
+  
 
     if(hoursChar[0] != displayedChar[0] || hoursChar[1] != displayedChar[1] || minutesChar[0] != displayedChar[2] || minutesChar[1] != displayedChar[3]) {
       displayedChar[0] = hoursChar[0];
@@ -163,17 +159,13 @@ bool Clock::Refresh() {
       displayedChar[3] = minutesChar[1];
 
       lv_label_set_text(label_time, timeStr);
-      lv_label_set_text(label_shadow_tm, shadow_tmStr);
     }
 
     if ((year != currentYear) || (month != currentMonth) || (dayOfWeek != currentDayOfWeek) || (day != currentDay)) {
       char dateStr[22];
       sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
-      
-      char Shadow_dtStr[23];
-      sprintf(Shadow_dtStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
-      
-      lv_label_set_text(label_shadow_dt, Shadow_dtStr);
+         
+  
       lv_label_set_text(label_date, dateStr);
       
 
