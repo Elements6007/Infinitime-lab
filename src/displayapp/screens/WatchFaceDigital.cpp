@@ -57,16 +57,12 @@ Clock::Clock(DisplayApp* app,
 
   lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 20, 60);
  
-
           
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
   lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 70, -50);
           
-  
-      
-  
-
+       
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
   backgroundLabel_user_data = this; ////backgroundLabel->user_data = this;
   lv_obj_set_click(backgroundLabel, true);
