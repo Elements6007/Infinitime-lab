@@ -67,7 +67,7 @@ Clock::Clock(DisplayApp* app,
   
   label_shadow_tm = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_shadow_tm, LV_LABELSTYLE, LabelBigStyle);
-  lv_obj_algin(label_shadow_tm, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 75, -55);
+  lv_obj_align(label_shadow_tm, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 75, -55);
           
        
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
