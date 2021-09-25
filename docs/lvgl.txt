@@ -1749,7 +1749,7 @@ Code[937]:
  - func[676] size=137 <event_handler(_lv_obj_t*, unsigned char)>
  - func[677] size=115 <std::__2::chrono::duration<long long, std::__2::ratio<1ll, 1000000000ll> >::zero()>
  - func[678] size=204 <Pinetime::Applications::Screens::Clock::OnObjectEvent(_lv_obj_t*, unsigned char)>
- - func[679] size=5988 <Pinetime::Applications::Screens::Clock::Refresh()>
+ - func[679] size=5424 <Pinetime::Applications::Screens::Clock::Refresh()>
  - func[680] size=51 <Pinetime::Controllers::Battery::PercentRemaining() const>
  - func[681] size=190 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::operator=(unsigned char const&)>
  - func[682] size=66 <Pinetime::Applications::Screens::DirtyValue<unsigned char>::IsUpdated() const>
