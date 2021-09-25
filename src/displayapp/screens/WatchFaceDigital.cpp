@@ -153,9 +153,7 @@ bool Clock::Refresh() {
     char timeStr[6];
     sprintf(timeStr, "%c%c\n%c%c", hoursChar[0],hoursChar[1],minutesChar[0], minutesChar[1]);
     
-    char tmshStr[6];
-    sprintf(tmshStr, "%c%c\n%c%c", hoursChar[0],hoursChar[1],minutesChar[0], minutesChar[1]);
-    
+   
  
   
 
@@ -166,7 +164,7 @@ bool Clock::Refresh() {
       displayedChar[3] = minutesChar[1];
 
       lv_label_set_text(label_time, timeStr);
-      lv_label_set_text(label_shadow_tm, tmshStr);
+   
   
       
     }
@@ -175,12 +173,11 @@ bool Clock::Refresh() {
       char dateStr[22];
       sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
       
-      char dtshStr[22];
-      sprintf(dateStr, "%s %d %s %d", DayOfWeekToString(dayOfWeek), day, MonthToString(month), year);
+ 
          
   
       lv_label_set_text(label_date, dateStr);
-      lv_label_set_text(label_shadow_dt, dtshStr);
+
          
 
 
