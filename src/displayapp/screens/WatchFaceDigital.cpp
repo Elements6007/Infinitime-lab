@@ -60,7 +60,7 @@ Clock::Clock(DisplayApp* app,
     
   label_time = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_style(label_time, LV_LABEL_STYLE_MAIN, LabelBigStyle);
-  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_CENTER, -40, -50);
+  lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_CENTER, -50, -50);
   
                 
   backgroundLabel = lv_label_create(lv_scr_act(), NULL);
