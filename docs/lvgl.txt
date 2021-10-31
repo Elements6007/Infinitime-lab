@@ -46,12 +46,12 @@ Type[39]:
 Import[7]:
  - func[0] sig=7 <__assert_fail> <- env.__assert_fail
  - func[1] sig=1 <mktime> <- env.mktime
- - func[2] sig=6 <abort> <- env.abort
- - func[3] sig=13 <__wasi_fd_write> <- wasi_snapshot_preview1.fd_write
+ - func[2] sig=13 <__wasi_fd_write> <- wasi_snapshot_preview1.fd_write
+ - func[3] sig=6 <abort> <- env.abort
  - func[4] sig=1 <emscripten_resize_heap> <- env.emscripten_resize_heap
  - func[5] sig=3 <emscripten_memcpy_big> <- env.emscripten_memcpy_big
  - func[6] sig=5 <setTempRet0> <- env.setTempRet0
-Function[937]:
+Function[940]:
  - func[7] sig=6 <__wasm_call_ctors>
  - func[8] sig=6 <_lv_indev_init>
  - func[9] sig=4 <lv_indev_reset>
@@ -937,18 +937,18 @@ Function[937]:
  - func[889] sig=0 <__stpcpy>
  - func[890] sig=8 <__errno_location>
  - func[891] sig=0 <wctomb>
- - func[892] sig=8 <__pthread_self>
- - func[893] sig=3 <wcrtomb>
- - func[894] sig=1 <isdigit>
- - func[895] sig=26 <__lshrti3>
- - func[896] sig=37 <__trunctfdf2>
- - func[897] sig=26 <__ashlti3>
- - func[898] sig=6 <emscripten_stack_init>
- - func[899] sig=8 <emscripten_stack_get_free>
- - func[900] sig=8 <emscripten_stack_get_end>
- - func[901] sig=1 <operator new(unsigned long)>
- - func[902] sig=1 <__wasi_syscall_ret>
- - func[903] sig=3 <__stdio_write>
+ - func[892] sig=3 <__stdio_write>
+ - func[893] sig=8 <__syscall_getpid>
+ - func[894] sig=8 <getpid>
+ - func[895] sig=8 <__pthread_self>
+ - func[896] sig=6 <init_pthread_self>
+ - func[897] sig=3 <wcrtomb>
+ - func[898] sig=1 <isdigit>
+ - func[899] sig=1 <__wasi_syscall_ret>
+ - func[900] sig=26 <__lshrti3>
+ - func[901] sig=37 <__trunctfdf2>
+ - func[902] sig=26 <__ashlti3>
+ - func[903] sig=1 <operator new(unsigned long)>
  - func[904] sig=8 <_get_tzname>
  - func[905] sig=8 <_get_daylight>
  - func[906] sig=8 <_get_timezone>
@@ -985,10 +985,13 @@ Function[937]:
  - func[937] sig=8 <stackSave>
  - func[938] sig=5 <stackRestore>
  - func[939] sig=1 <stackAlloc>
- - func[940] sig=1 <fflush>
- - func[941] sig=1 <__fflush_unlocked>
- - func[942] sig=38 <dynCall_jiji>
- - func[943] sig=10 <legalstub$dynCall_jiji>
+ - func[940] sig=6 <emscripten_stack_init>
+ - func[941] sig=8 <emscripten_stack_get_free>
+ - func[942] sig=8 <emscripten_stack_get_end>
+ - func[943] sig=1 <fflush>
+ - func[944] sig=1 <__fflush_unlocked>
+ - func[945] sig=38 <dynCall_jiji>
+ - func[946] sig=10 <legalstub$dynCall_jiji>
 Table[1]:
  - table[0] type=funcref initial=50 max=50
 Memory[1]:
@@ -1012,19 +1015,19 @@ Export[27]:
  - func[864] <render_widgets> -> "render_widgets"
  - func[866] <render_display> -> "render_display"
  - func[867] <main> -> "main"
- - func[940] <fflush> -> "fflush"
+ - func[943] <fflush> -> "fflush"
  - func[890] <__errno_location> -> "__errno_location"
- - func[920] <dlmalloc> -> "malloc"
- - func[900] <emscripten_stack_get_end> -> "emscripten_stack_get_end"
  - func[904] <_get_tzname> -> "_get_tzname"
  - func[905] <_get_daylight> -> "_get_daylight"
  - func[906] <_get_timezone> -> "_get_timezone"
  - func[937] <stackSave> -> "stackSave"
  - func[938] <stackRestore> -> "stackRestore"
  - func[939] <stackAlloc> -> "stackAlloc"
- - func[898] <emscripten_stack_init> -> "emscripten_stack_init"
- - func[899] <emscripten_stack_get_free> -> "emscripten_stack_get_free"
- - func[943] <legalstub$dynCall_jiji> -> "dynCall_jiji"
+ - func[940] <emscripten_stack_init> -> "emscripten_stack_init"
+ - func[941] <emscripten_stack_get_free> -> "emscripten_stack_get_free"
+ - func[942] <emscripten_stack_get_end> -> "emscripten_stack_get_end"
+ - func[920] <dlmalloc> -> "malloc"
+ - func[946] <legalstub$dynCall_jiji> -> "dynCall_jiji"
 Elem[1]:
  - segment[0] flags=0 table=0 count=49 - init i32=1
   - elem[1] = func[20] <lv_obj_signal>
@@ -1074,10 +1077,10 @@ Elem[1]:
   - elem[45] = func[882] <fmt_fp>
   - elem[46] = func[883] <pop_arg_long_double>
   - elem[47] = func[929] <__emscripten_stdout_close>
-  - elem[48] = func[903] <__stdio_write>
+  - elem[48] = func[892] <__stdio_write>
   - elem[49] = func[930] <__emscripten_stdout_seek>
-Code[937]:
- - func[7] size=5 <__wasm_call_ctors>
+Code[940]:
+ - func[7] size=8 <__wasm_call_ctors>
  - func[8] size=15 <_lv_indev_init>
  - func[9] size=833 <lv_indev_reset>
  - func[10] size=22 <lv_indev_get_act>
@@ -1952,7 +1955,7 @@ Code[937]:
  - func[879] size=140 <fmt_u>
  - func[880] size=115 <pad>
  - func[881] size=15 <vfprintf>
- - func[882] size=3149 <fmt_fp>
+ - func[882] size=3146 <fmt_fp>
  - func[883] size=46 <pop_arg_long_double>
  - func[884] size=5 <__DOUBLE_BITS>
  - func[885] size=143 <frexp>
@@ -1962,18 +1965,18 @@ Code[937]:
  - func[889] size=205 <__stpcpy>
  - func[890] size=6 <__errno_location>
  - func[891] size=21 <wctomb>
- - func[892] size=6 <__pthread_self>
- - func[893] size=292 <wcrtomb>
- - func[894] size=10 <isdigit>
- - func[895] size=83 <__lshrti3>
- - func[896] size=494 <__trunctfdf2>
- - func[897] size=83 <__ashlti3>
- - func[898] size=21 <emscripten_stack_init>
- - func[899] size=7 <emscripten_stack_get_free>
- - func[900] size=4 <emscripten_stack_get_end>
- - func[901] size=51 <operator new(unsigned long)>
- - func[902] size=22 <__wasi_syscall_ret>
- - func[903] size=356 <__stdio_write>
+ - func[892] size=356 <__stdio_write>
+ - func[893] size=4 <__syscall_getpid>
+ - func[894] size=5 <getpid>
+ - func[895] size=6 <__pthread_self>
+ - func[896] size=26 <init_pthread_self>
+ - func[897] size=292 <wcrtomb>
+ - func[898] size=10 <isdigit>
+ - func[899] size=22 <__wasi_syscall_ret>
+ - func[900] size=83 <__lshrti3>
+ - func[901] size=494 <__trunctfdf2>
+ - func[902] size=83 <__ashlti3>
+ - func[903] size=51 <operator new(unsigned long)>
  - func[904] size=6 <_get_tzname>
  - func[905] size=6 <_get_daylight>
  - func[906] size=6 <_get_timezone>
@@ -2010,10 +2013,13 @@ Code[937]:
  - func[937] size=4 <stackSave>
  - func[938] size=6 <stackRestore>
  - func[939] size=20 <stackAlloc>
- - func[940] size=186 <fflush>
- - func[941] size=109 <__fflush_unlocked>
- - func[942] size=13 <dynCall_jiji>
- - func[943] size=36 <legalstub$dynCall_jiji>
+ - func[940] size=21 <emscripten_stack_init>
+ - func[941] size=7 <emscripten_stack_get_free>
+ - func[942] size=4 <emscripten_stack_get_end>
+ - func[943] size=186 <fflush>
+ - func[944] size=109 <__fflush_unlocked>
+ - func[945] size=13 <dynCall_jiji>
+ - func[946] size=36 <legalstub$dynCall_jiji>
 Data[2]:
  - segment[0] <.rodata> memory=0 size=73364 - init i32=1024
   - 0000400: ef87 a600 ef88 9e00 ef8a 9400 ef80 8c00  ................
@@ -2403,74 +2409,74 @@ Data[2]:
   - 0001c00: 6c65 7474 6572 3a20 666f 6e74 2069 7320  letter: font is 
   - 0001c10: 4e55 4c4c 0049 6d61 6765 2064 7261 773a  NULL.Image draw:
   - 0001c20: 2073 7263 2069 7320 4e55 4c4c 0041 5547   src is NULL.AUG
-  - 0001c30: 0049 4e46 0044 4543 0046 4542 0036 3700  .INF.DEC.FEB.67.
-  - 0001c40: 3200 3637 3033 3000 3730 3830 3000 6c76  2.67030.70800.lv
-  - 0001c50: 5f69 6d67 5f63 6163 6865 5f6f 7065 6e3a  _img_cache_open:
-  - 0001c60: 2074 6865 2063 6163 6865 2073 697a 6520   the cache size 
-  - 0001c70: 6973 2030 0079 203e 3d20 3000 7820 3e3d  is 0.y >= 0.x >=
-  - 0001c80: 2030 0049 6d61 6765 2062 7569 6c74 2d69   0.Image built-i
-  - 0001c90: 6e20 6465 636f 6465 7220 6361 6e20 7265  n decoder can re
-  - 0001ca0: 6164 2074 6865 2070 616c 6574 7465 2062  ad the palette b
-  - 0001cb0: 6563 6175 7365 204c 565f 5553 455f 4649  ecause LV_USE_FI
-  - 0001cc0: 4c45 5359 5354 454d 203d 2030 0049 6d61  LESYSTEM = 0.Ima
-  - 0001cd0: 6765 2062 7569 6c74 2d69 6e20 6465 636f  ge built-in deco
-  - 0001ce0: 6465 7220 6361 6e6e 6f74 2072 6561 6420  der cannot read 
-  - 0001cf0: 6669 6c65 2062 6563 6175 7365 204c 565f  file because LV_
-  - 0001d00: 5553 455f 4649 4c45 5359 5354 454d 203d  USE_FILESYSTEM =
-  - 0001d10: 2030 0049 6d61 6765 2062 7569 6c74 2d69   0.Image built-i
-  - 0001d20: 6e20 696e 6465 7865 6420 6c69 6e65 2072  n indexed line r
-  - 0001d30: 6561 6465 7220 6361 6e27 7420 7265 6164  eader can't read
-  - 0001d40: 2066 696c 6520 6265 6361 7573 6520 4c56   file because LV
-  - 0001d50: 5f55 5345 5f46 494c 4553 5953 5445 4d20  _USE_FILESYSTEM 
-  - 0001d60: 3d20 3000 496d 6167 6520 6275 696c 742d  = 0.Image built-
-  - 0001d70: 696e 2061 6c70 6861 206c 696e 6520 7265  in alpha line re
-  - 0001d80: 6164 6572 2063 616e 2774 2072 6561 6420  ader can't read 
-  - 0001d90: 6669 6c65 2062 6563 6175 7365 204c 565f  file because LV_
-  - 0001da0: 5553 455f 4649 4c45 5359 5354 454d 203d  USE_FILESYSTEM =
-  - 0001db0: 2030 0054 6865 2073 7472 696e 6773 2068   0.The strings h
-  - 0001dc0: 6173 206e 6f20 5554 462d 3820 656e 636f  as no UTF-8 enco
-  - 0001dd0: 6469 6e67 2e20 536f 6d65 2063 6861 7261  ding. Some chara
-  - 0001de0: 6374 6572 7320 776f 6e27 7420 6265 2064  cters won't be d
-  - 0001df0: 6973 706c 6179 6564 2e00 4361 6e27 7420  isplayed..Can't 
-  - 0001e00: 6861 6e64 6c65 2032 2073 6372 6565 6e20  handle 2 screen 
-  - 0001e10: 7369 7a65 6420 6275 6666 6572 7320 7769  sized buffers wi
-  - 0001e20: 7468 2073 6574 5f70 785f 6362 2e20 4469  th set_px_cb. Di
-  - 0001e30: 7370 6c61 7920 6973 206e 6f74 2072 6566  splay is not ref
-  - 0001e40: 7265 7368 6564 2e00 4361 6e27 7420 6861  reshed..Can't ha
-  - 0001e50: 6e64 6c65 2032 2073 6372 6565 6e20 7369  ndle 2 screen si
-  - 0001e60: 7a65 6420 6275 6666 6572 7320 7769 7468  zed buffers with
-  - 0001e70: 2073 6574 5f70 785f 6362 2e20 4469 7370   set_px_cb. Disp
-  - 0001e80: 6c61 7920 7769 6c6c 206e 6f74 2062 6520  lay will not be 
-  - 0001e90: 7265 6672 6573 6865 642e 004e 6f20 6672  refreshed..No fr
-  - 0001ea0: 6565 2062 7566 6665 722e 2049 6e63 7265  ee buffer. Incre
-  - 0001eb0: 6173 6520 4c56 5f44 5241 575f 4255 465f  ase LV_DRAW_BUF_
-  - 0001ec0: 4d41 585f 4e55 4d2e 0049 6e20 433a 2049  MAX_NUM..In C: I
-  - 0001ed0: 6e69 7420 6469 7370 6c61 792e 2e2e 0049  nit display....I
-  - 0001ee0: 6e20 433a 2054 6573 7469 6e67 2064 6973  n C: Testing dis
-  - 0001ef0: 706c 6179 2e2e 2e00 496e 2043 3a20 5265  play....In C: Re
-  - 0001f00: 6e64 6572 696e 6720 6469 7370 6c61 792e  ndering display.
-  - 0001f10: 2e2e 0049 6e20 433a 2052 656e 6465 7269  ...In C: Renderi
-  - 0001f20: 6e67 2077 6964 6765 7473 2e2e 2e00 496e  ng widgets....In
-  - 0001f30: 2043 2b2b 3a20 4372 6561 7469 6e67 2063   C++: Creating c
-  - 0001f40: 6c6f 636b 2e2e 2e00 496e 2043 2b2b 3a20  lock....In C++: 
-  - 0001f50: 5570 6461 7469 6e67 2063 6c6f 636b 2e2e  Updating clock..
-  - 0001f60: 2e00 496e 2043 2b2b 3a20 5265 6672 6573  ..In C++: Refres
-  - 0001f70: 6869 6e67 2063 6c6f 636b 2e2e 2e00 286e  hing clock....(n
-  - 0001f80: 756c 6c29 0043 616e 2774 2073 6574 2056  ull).Can't set V
-  - 0001f90: 4442 2068 6569 6768 7420 7573 696e 6720  DB height using 
-  - 0001fa0: 7468 6520 726f 756e 6420 6675 6e63 7469  the round functi
-  - 0001fb0: 6f6e 2e20 2857 726f 6e67 2072 6f75 6e64  on. (Wrong round
-  - 0001fc0: 5f63 6220 6f72 2074 6f20 736d 616c 6c20  _cb or to small 
-  - 0001fd0: 5644 4229 0049 6e76 616c 6964 2073 7479  VDB).Invalid sty
-  - 0001fe0: 6c65 2028 6c6f 6361 6c20 7661 7269 6162  le (local variab
-  - 0001ff0: 6c65 206f 7220 6e6f 7420 696e 6974 6961  le or not initia
-  - 0002000: 6c69 7a65 643f 2900 496e 2043 3a20 6d61  lized?).In C: ma
-  - 0002010: 696e 2829 0023 0049 6e20 433a 2046 6c75  in().#.In C: Flu
-  - 0002020: 7368 2064 6973 706c 6179 3a20 6c65 6674  sh display: left
-  - 0002030: 3d25 642c 2074 6f70 3d25 642c 2072 6967  =%d, top=%d, rig
-  - 0002040: 6874 3d25 642c 2062 6f74 746f 6d3d 2564  ht=%d, bottom=%d
-  - 0002050: 2e2e 2e0a 0025 733a 2025 7320 0928 2573  .....%s: %s .(%s
-  - 0002060: 2023 2564 2025 7328 2929 0a00 1600 0000   #%d %s())......
+  - 0001c30: 0049 4e46 0044 4543 0046 4542 0036 3730  .INF.DEC.FEB.670
+  - 0001c40: 3300 3200 3630 0037 3038 3030 006c 765f  3.2.60.70800.lv_
+  - 0001c50: 696d 675f 6361 6368 655f 6f70 656e 3a20  img_cache_open: 
+  - 0001c60: 7468 6520 6361 6368 6520 7369 7a65 2069  the cache size i
+  - 0001c70: 7320 3000 7920 3e3d 2030 0078 203e 3d20  s 0.y >= 0.x >= 
+  - 0001c80: 3000 496d 6167 6520 6275 696c 742d 696e  0.Image built-in
+  - 0001c90: 2064 6563 6f64 6572 2063 616e 2072 6561   decoder can rea
+  - 0001ca0: 6420 7468 6520 7061 6c65 7474 6520 6265  d the palette be
+  - 0001cb0: 6361 7573 6520 4c56 5f55 5345 5f46 494c  cause LV_USE_FIL
+  - 0001cc0: 4553 5953 5445 4d20 3d20 3000 496d 6167  ESYSTEM = 0.Imag
+  - 0001cd0: 6520 6275 696c 742d 696e 2064 6563 6f64  e built-in decod
+  - 0001ce0: 6572 2063 616e 6e6f 7420 7265 6164 2066  er cannot read f
+  - 0001cf0: 696c 6520 6265 6361 7573 6520 4c56 5f55  ile because LV_U
+  - 0001d00: 5345 5f46 494c 4553 5953 5445 4d20 3d20  SE_FILESYSTEM = 
+  - 0001d10: 3000 496d 6167 6520 6275 696c 742d 696e  0.Image built-in
+  - 0001d20: 2069 6e64 6578 6564 206c 696e 6520 7265   indexed line re
+  - 0001d30: 6164 6572 2063 616e 2774 2072 6561 6420  ader can't read 
+  - 0001d40: 6669 6c65 2062 6563 6175 7365 204c 565f  file because LV_
+  - 0001d50: 5553 455f 4649 4c45 5359 5354 454d 203d  USE_FILESYSTEM =
+  - 0001d60: 2030 0049 6d61 6765 2062 7569 6c74 2d69   0.Image built-i
+  - 0001d70: 6e20 616c 7068 6120 6c69 6e65 2072 6561  n alpha line rea
+  - 0001d80: 6465 7220 6361 6e27 7420 7265 6164 2066  der can't read f
+  - 0001d90: 696c 6520 6265 6361 7573 6520 4c56 5f55  ile because LV_U
+  - 0001da0: 5345 5f46 494c 4553 5953 5445 4d20 3d20  SE_FILESYSTEM = 
+  - 0001db0: 3000 5468 6520 7374 7269 6e67 7320 6861  0.The strings ha
+  - 0001dc0: 7320 6e6f 2055 5446 2d38 2065 6e63 6f64  s no UTF-8 encod
+  - 0001dd0: 696e 672e 2053 6f6d 6520 6368 6172 6163  ing. Some charac
+  - 0001de0: 7465 7273 2077 6f6e 2774 2062 6520 6469  ters won't be di
+  - 0001df0: 7370 6c61 7965 642e 0043 616e 2774 2068  splayed..Can't h
+  - 0001e00: 616e 646c 6520 3220 7363 7265 656e 2073  andle 2 screen s
+  - 0001e10: 697a 6564 2062 7566 6665 7273 2077 6974  ized buffers wit
+  - 0001e20: 6820 7365 745f 7078 5f63 622e 2044 6973  h set_px_cb. Dis
+  - 0001e30: 706c 6179 2069 7320 6e6f 7420 7265 6672  play is not refr
+  - 0001e40: 6573 6865 642e 0043 616e 2774 2068 616e  eshed..Can't han
+  - 0001e50: 646c 6520 3220 7363 7265 656e 2073 697a  dle 2 screen siz
+  - 0001e60: 6564 2062 7566 6665 7273 2077 6974 6820  ed buffers with 
+  - 0001e70: 7365 745f 7078 5f63 622e 2044 6973 706c  set_px_cb. Displ
+  - 0001e80: 6179 2077 696c 6c20 6e6f 7420 6265 2072  ay will not be r
+  - 0001e90: 6566 7265 7368 6564 2e00 4e6f 2066 7265  efreshed..No fre
+  - 0001ea0: 6520 6275 6666 6572 2e20 496e 6372 6561  e buffer. Increa
+  - 0001eb0: 7365 204c 565f 4452 4157 5f42 5546 5f4d  se LV_DRAW_BUF_M
+  - 0001ec0: 4158 5f4e 554d 2e00 496e 2043 3a20 496e  AX_NUM..In C: In
+  - 0001ed0: 6974 2064 6973 706c 6179 2e2e 2e00 496e  it display....In
+  - 0001ee0: 2043 3a20 5465 7374 696e 6720 6469 7370   C: Testing disp
+  - 0001ef0: 6c61 792e 2e2e 0049 6e20 433a 2052 656e  lay....In C: Ren
+  - 0001f00: 6465 7269 6e67 2064 6973 706c 6179 2e2e  dering display..
+  - 0001f10: 2e00 496e 2043 3a20 5265 6e64 6572 696e  ..In C: Renderin
+  - 0001f20: 6720 7769 6467 6574 732e 2e2e 0049 6e20  g widgets....In 
+  - 0001f30: 432b 2b3a 2043 7265 6174 696e 6720 636c  C++: Creating cl
+  - 0001f40: 6f63 6b2e 2e2e 0049 6e20 432b 2b3a 2055  ock....In C++: U
+  - 0001f50: 7064 6174 696e 6720 636c 6f63 6b2e 2e2e  pdating clock...
+  - 0001f60: 0049 6e20 432b 2b3a 2052 6566 7265 7368  .In C++: Refresh
+  - 0001f70: 696e 6720 636c 6f63 6b2e 2e2e 0028 6e75  ing clock....(nu
+  - 0001f80: 6c6c 2900 4361 6e27 7420 7365 7420 5644  ll).Can't set VD
+  - 0001f90: 4220 6865 6967 6874 2075 7369 6e67 2074  B height using t
+  - 0001fa0: 6865 2072 6f75 6e64 2066 756e 6374 696f  he round functio
+  - 0001fb0: 6e2e 2028 5772 6f6e 6720 726f 756e 645f  n. (Wrong round_
+  - 0001fc0: 6362 206f 7220 746f 2073 6d61 6c6c 2056  cb or to small V
+  - 0001fd0: 4442 2900 496e 7661 6c69 6420 7374 796c  DB).Invalid styl
+  - 0001fe0: 6520 286c 6f63 616c 2076 6172 6961 626c  e (local variabl
+  - 0001ff0: 6520 6f72 206e 6f74 2069 6e69 7469 616c  e or not initial
+  - 0002000: 697a 6564 3f29 0049 6e20 433a 206d 6169  ized?).In C: mai
+  - 0002010: 6e28 2900 2300 496e 2043 3a20 466c 7573  n().#.In C: Flus
+  - 0002020: 6820 6469 7370 6c61 793a 206c 6566 743d  h display: left=
+  - 0002030: 2564 2c20 746f 703d 2564 2c20 7269 6768  %d, top=%d, righ
+  - 0002040: 743d 2564 2c20 626f 7474 6f6d 3d25 642e  t=%d, bottom=%d.
+  - 0002050: 2e2e 0a00 2573 3a20 2573 2009 2825 7320  ....%s: %s .(%s 
+  - 0002060: 2325 6420 2573 2829 290a 0000 1600 0000  #%d %s()).......
   - 0002070: 0000 0000 0000 0000 0000 0000 0000 0000  ................
   - 0002080: 0000 3c02 7804 b306 ee08 280b 610d 990f  ..<.x.....(.a...
   - 0002090: d011 0614 3a16 6c18 9d1a cb1c f71e 2121  ....:.l.......!!
@@ -6601,16 +6607,16 @@ Data[2]:
   - 0012260: 0000 0000 0000 0000 000c 0000 0000 0c00  ................
   - 0012270: 0000 0009 0c00 0000 0000 0c00 000c 0000  ................
   - 0012280: 3031 3233 3435 3637 3839 4142 4344 4546  0123456789ABCDEF
-  - 0012290: 9824 0100                                .$..
- - segment[1] <.data> memory=0 size=652 - init i32=74400
-  - 00122a0: c045 0100 1000 0000 d045 0100 1000 0000  .E.......E......
+  - 0012290: b823 0100                                .#..
+ - segment[1] <.data> memory=0 size=428 - init i32=74400
+  - 00122a0: e044 0100 1000 0000 f044 0100 1000 0000  .D.......D......
   - 00122b0: 1700 0000 1800 0000 1900 0000 1a00 0000  ................
   - 00122c0: 1b00 0000 1c00 0000 0000 0000 0000 0000  ................
   - 00122d0: 3614 0000 930c 0000 d80c 0000 570a 0000  6...........W...
   - 00122e0: 940b 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00122f0: 6b20 0000 9c1b 0000 7a1b 0000 821b 0000  k ......z.......
+  - 00122f0: 6a20 0000 9c1b 0000 7a1b 0000 821b 0000  j ......z.......
   - 0012300: 711b 0000 a31b 0000 8c1b 0000 951b 0000  q...............
-  - 0012310: 6b20 0000 ec1b 0000 391c 0000 dc1b 0000  k ......9.......
+  - 0012310: 6a20 0000 ec1b 0000 391c 0000 dc1b 0000  j ......9.......
   - 0012320: d81b 0000 6d1b 0000 e41b 0000 f41b 0000  ....m...........
   - 0012330: 2d1c 0000 e01b 0000 d41b 0000 d01b 0000  -...............
   - 0012340: 351c 0000 2a00 0000 2b00 0000 1500 0300  5...*...+.......
@@ -6620,36 +6626,22 @@ Data[2]:
   - 0012380: 2b00 0000 3c00 0100 0000 0000 9423 0100  +...<........#..
   - 0012390: 0000 0000 9013 0100 c01f 0100 a01f 0100  ................
   - 00123a0: 0000 0000 0000 0104 0000 0000 0000 0000  ................
-  - 00123b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00123c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00123d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00123e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 00123f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012400: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+  - 00123b0: 0000 0000 5057 5800 0500 0000 0000 0000  ....PWX.........
+  - 00123c0: 0000 0000 2f00 0000 0000 0000 0000 0000  ..../...........
+  - 00123d0: 0000 0000 0000 0000 0000 0000 3000 0000  ............0...
+  - 00123e0: 3100 0000 4853 0800 0004 0000 0000 0000  1...HS..........
+  - 00123f0: 0000 0000 0100 0000 0000 0000 0000 0000  ................
+  - 0012400: 0000 000a ffff ffff 0000 0000 0000 0000  ................
   - 0012410: 0000 0000 0000 0000 0000 0000 0000 0000  ................
   - 0012420: 0000 0000 0000 0000 0000 0000 0000 0000  ................
   - 0012430: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012440: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012450: 0000 0000 0000 0000 0000 0000 0c51 0800  .............Q..
-  - 0012460: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012470: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012480: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012490: 0000 0000 5057 5800 0500 0000 0000 0000  ....PWX.........
-  - 00124a0: 0000 0000 2f00 0000 0000 0000 0000 0000  ..../...........
-  - 00124b0: 0000 0000 0000 0000 0000 0000 3000 0000  ............0...
-  - 00124c0: 3100 0000 4853 0800 0004 0000 0000 0000  1...HS..........
-  - 00124d0: 0000 0000 0100 0000 0000 0000 0000 0000  ................
-  - 00124e0: 0000 000a ffff ffff 0000 0000 0000 0000  ................
-  - 00124f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012500: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012510: 0000 0000 0000 0000 0000 0000 0000 0000  ................
-  - 0012520: 0000 0000 0000 0000 9824 0100            .........$..
+  - 0012440: 0000 0000 0000 0000 b823 0100            .........#..
 Custom:
  - name: "name"
  - func[0] <__assert_fail>
  - func[1] <mktime>
- - func[2] <abort>
- - func[3] <__wasi_fd_write>
+ - func[2] <__wasi_fd_write>
+ - func[3] <abort>
  - func[4] <emscripten_resize_heap>
  - func[5] <emscripten_memcpy_big>
  - func[6] <setTempRet0>
@@ -7538,18 +7530,18 @@ Custom:
  - func[889] <__stpcpy>
  - func[890] <__errno_location>
  - func[891] <wctomb>
- - func[892] <__pthread_self>
- - func[893] <wcrtomb>
- - func[894] <isdigit>
- - func[895] <__lshrti3>
- - func[896] <__trunctfdf2>
- - func[897] <__ashlti3>
- - func[898] <emscripten_stack_init>
- - func[899] <emscripten_stack_get_free>
- - func[900] <emscripten_stack_get_end>
- - func[901] <operator new(unsigned long)>
- - func[902] <__wasi_syscall_ret>
- - func[903] <__stdio_write>
+ - func[892] <__stdio_write>
+ - func[893] <__syscall_getpid>
+ - func[894] <getpid>
+ - func[895] <__pthread_self>
+ - func[896] <init_pthread_self>
+ - func[897] <wcrtomb>
+ - func[898] <isdigit>
+ - func[899] <__wasi_syscall_ret>
+ - func[900] <__lshrti3>
+ - func[901] <__trunctfdf2>
+ - func[902] <__ashlti3>
+ - func[903] <operator new(unsigned long)>
  - func[904] <_get_tzname>
  - func[905] <_get_daylight>
  - func[906] <_get_timezone>
@@ -7586,14 +7578,17 @@ Custom:
  - func[937] <stackSave>
  - func[938] <stackRestore>
  - func[939] <stackAlloc>
- - func[940] <fflush>
- - func[941] <__fflush_unlocked>
- - func[942] <dynCall_jiji>
- - func[943] <legalstub$dynCall_jiji>
- - func[942] local[0] <fptr>
- - func[942] local[1] <0>
- - func[942] local[2] <1>
- - func[942] local[3] <2>
+ - func[940] <emscripten_stack_init>
+ - func[941] <emscripten_stack_get_free>
+ - func[942] <emscripten_stack_get_end>
+ - func[943] <fflush>
+ - func[944] <__fflush_unlocked>
+ - func[945] <dynCall_jiji>
+ - func[946] <legalstub$dynCall_jiji>
+ - func[945] local[0] <fptr>
+ - func[945] local[1] <0>
+ - func[945] local[2] <1>
+ - func[945] local[3] <2>
  - global[0] <__stack_pointer>
  - global[1] <__stack_end>
  - global[2] <__stack_base>
